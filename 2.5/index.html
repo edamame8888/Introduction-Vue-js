@@ -9,16 +9,12 @@
 
 
 </head>
-<div id="app">
-  {{message}}
-</div>
 
-<script>
-  console.assert(typeof Vue !== 'undefined')
-  new Vue({
-    el: '#app',
-    data: {
-      message: 'hello!'
-    }
-  })
-</script>
+<body>
+  <div id="app">
+    <p>
+      {{ items[0].name }}
+    </p>
+  </div>
+  <script src="js/app.js"></script>
+</body>
