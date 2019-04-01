@@ -104,3 +104,10 @@ v-on: イベント名="式として実行したい属性値"
 <input type="number" @change="item.quantity = $event.target.value" v-bind:value="item.quantity" min="0">
 ```
 ※省略記法はサーバサイドのテンプレートエンジンで扱う場合に不正な記述と見なされてエラーになる場合があります。
+
+#### 5 フォーム入力バインディング(v-model)
+Vue.jsではv-modelを用いいることで双方向バインディングを実現することができる。
+```html
+<input type="number" v-model="item.quantity" min="0">
+```
+上記のように記述することで、v-on:inputと同じ振る舞いを実現できます。
