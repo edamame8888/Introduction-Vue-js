@@ -91,3 +91,16 @@ v-bind:key=〜で生成時に一意なキーを各要素に与えられる。
   <li v-for="item in arr" v-bind:key="item">{{item}}</li>
 </ul>
 ```
+
+#### 4 イベントハンドリング(v-on)
+Vue.jsではv-onディレクティブを利用してイベントをハンドリングしてデータを変更します。
+```html
+v-on: イベント名="式として実行したい属性値"
+```
+使用例
+```html
+<input type="number" v-on:change="item.quantity = $event.target.value" v-bind:value="item.quantity" min="0">
+//v-on: を @ に置き代えれれるンゴ
+<input type="number" @change="item.quantity = $event.target.value" v-bind:value="item.quantity" min="0">
+```
+※省略記法はサーバサイドのテンプレートエンジンで扱う場合に不正な記述と見なされてエラーになる場合があります。
