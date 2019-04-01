@@ -27,3 +27,17 @@ Vue.jsの最新バージョンの導入は
       hoge
     })
   '''
+
+### 2.7 フィルタ(filters)
+js側の処理
+'''js
+  filters:{
+    フィルタ名 :function (value) {
+      // return
+    }
+  }
+'''
+html側の処理
+'''html
+  {{ 値 : フィルタ名 }}
+'''

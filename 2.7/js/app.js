@@ -14,17 +14,21 @@ var items = [{
     quantity: 0
   }
 ];
+
 // ロードされ、Vueがグローバル変数として定義されているか確認
 console.assert(typeof Vue !== 'undefined');
+
 var vm = new Vue({
   el: '#app',
   data: {
     items: items
   },
   filters: { //この説で追加したフィルターの追加
-    if ( !value ) {
-      return '0'
-    }
-    return value.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1,')
+    numberWithDelimiter: function (value){
+      if ( !value ) {
+        return '0'
+      }
+      return value.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1,')
+    }  
   }
 });
