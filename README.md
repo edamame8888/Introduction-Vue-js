@@ -78,3 +78,16 @@ style変更、class変更時のhtmlの例
   //class
   <p :class="{error: !canBuy}"> </p>
 ```
+
+#### 3 リストレンダリング(v-for)
+リストレンダリングをしたい -> v-forディレクティブを使おう！
+```html
+v-for="要素 in 配列"
+```
+v-bind:key=〜で生成時に一意なキーを各要素に与えられる。
+これは、Vue.jsのパフォーマンスとおの理由で与えられるもので必須である。
+```html
+<ul>
+  <li v-for="item in arr" v-bind:key="item">{{item}}</li>
+</ul>
+```
