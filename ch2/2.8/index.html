@@ -10,12 +10,9 @@
 
 <body>
   <div id="app">
-    <p>
-      {{ items[0].name }}: {{ items[0].price }} x {{ items[0].quantity }}
-    </p>
-    <p>
-      フィルタの処理例 {{ 1000 | numberWithDelimiter }}
-    </p>
+    <p>{{ items[0].name }}: {{ items[0].price }} x {{ items[0].quantity }}</p>
+    <p>小計: {{ totalPrice | numberWithDelimiter }}円</p>
+    <p>合計(税込): {{totalPriceWithTax | numberWithDelimiter}}円</p>
     <script src="js/app.js"></script>
   </div>
 
