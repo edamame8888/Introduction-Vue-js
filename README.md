@@ -124,3 +124,20 @@ Vueインスタンスには、生成から消滅までに到るまでのライ�
 | updated  | データが変更され、DOMに適用された後  |
 | beforeDestroy  | Vueインスタンスが破棄される前  |
 | afterDestroy  | Vueインスタンスが破棄された後  |
+
+### 2.11 メソッド(methods)
+Vueインスタンスのメソッドは、データの変更やサーバーにHTTPリクエストを送る際に用いる。
+```js
+  methods: {
+    メソッド名: function() {
+      //処理
+    }
+  }
+```  
+定義されたメソッドはVueインスタンスのメソッドとして呼び出せます。
+よくあるのは、v-onディレクティブの属性値にバインディングして、Viewのイベントが発生した時に呼び出す形です。
+```html
+  <button v-bind:disabled="!canBuy" v-on:click="doBuy">購入</button>
+  //v-onディレクティブの属性値には、メソッド名または式を指定できます。
+  <button v-bind:disabled="!canBuy" v-on:click="doBuy($event)">購入</button>
+```  
