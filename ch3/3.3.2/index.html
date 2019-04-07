@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title> 初めてのVue.js</title>
+
+  <!-- Vue.jsの読み込み -->
+  <script src="https://unpkg.com/vue@2.5.17"></script>
+</head>
+
+<body>
+  <div id="fruits-counter">
+    <div v-for="fruit in fruits">
+      <!-- カスタムイベントをv-onで捕捉 -->
+      {{fruit.name}}: <counter-button v-on:increment="incrementCartStatus()"></counter-button>
+    </div>
+    <p>合計: {{total}}</p>
+  </div>
+  <script src="js/app.js"></script>
+</body>
